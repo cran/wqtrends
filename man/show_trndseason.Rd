@@ -2,7 +2,7 @@
 % Please edit documentation in R/show_trndseason.R
 \name{show_trndseason}
 \alias{show_trndseason}
-\title{Plot seasonal rates of change based on average estimates}
+\title{Plot rates of change based on seasonal metrics}
 \usage{
 show_trndseason(
   mod,
@@ -15,6 +15,7 @@ show_trndseason(
   ylab,
   nsim = 10000,
   useave = FALSE,
+  usearrow = FALSE,
   base_size = 11,
   xlim = NULL,
   ylim = NULL,
@@ -42,6 +43,8 @@ show_trndseason(
 
 \item{useave}{logical indicating if \code{anlz_avgseason} is used for the seasonal metric calculation}
 
+\item{usearrow}{logical indicating if arrows should be used to indicate significant trend direction}
+
 \item{base_size}{numeric indicating base font size, passed to \code{\link[ggplot2]{theme_bw}}}
 
 \item{xlim}{optional numeric vector of length two for x-axis limits}
@@ -54,7 +57,7 @@ show_trndseason(
 A \code{\link[ggplot2]{ggplot}} object
 }
 \description{
-Plot seasonal rates of change based on average estimates
+Plot rates of change based on seasonal metrics
 }
 \examples{
 library(dplyr)
