@@ -14,9 +14,12 @@ show_trndseason(
   win = 5,
   ylab,
   nsim = 10000,
+  yromit = NULL,
   useave = FALSE,
-  usearrow = FALSE,
   base_size = 11,
+  nms = NULL,
+  fils = NULL,
+  cols = NULL,
   xlim = NULL,
   ylim = NULL,
   ...
@@ -41,17 +44,23 @@ show_trndseason(
 
 \item{nsim}{numeric indicating number of random draws for simulating uncertainty}
 
-\item{useave}{logical indicating if \code{anlz_avgseason} is used for the seasonal metric calculation}
+\item{yromit}{optional numeric vector for years to omit from the output}
 
-\item{usearrow}{logical indicating if arrows should be used to indicate significant trend direction}
+\item{useave}{logical indicating if \code{anlz_avgseason} is used for the seasonal metric calculation, see details}
 
 \item{base_size}{numeric indicating base font size, passed to \code{\link[ggplot2]{theme_bw}}}
+
+\item{nms}{optional character vector for trend names}
+
+\item{fils}{optional character vector for the fill of interior point colors}
+
+\item{cols}{optional character vector for confidence interval colors}
 
 \item{xlim}{optional numeric vector of length two for x-axis limits}
 
 \item{ylim}{optional numeric vector of length two for y-axis limits}
 
-\item{...}{additional arguments passed to \code{metfun}, e.g., \code{na.rm = TRUE)}}
+\item{...}{additional arguments passed to \code{metfun}, e.g., \code{na.rm = TRUE}}
 }
 \value{
 A \code{\link[ggplot2]{ggplot}} object

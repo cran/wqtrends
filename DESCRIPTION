@@ -1,7 +1,7 @@
 Package: wqtrends
 Title: Assess Water Quality Trends with Generalized Additive Models
-Version: 1.4.2
-Date: 2024-01-26
+Version: 1.5.0
+Date: 2024-09-04
 Authors@R: c(
     person(given = "Marcus",
       family = "Beck",
@@ -60,7 +60,7 @@ BugReports: https://github.com/tbep-tech/wqtrends/issues
 Suggests: testthat (>= 2.1.0), covr, english, knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2024-01-26 15:06:27 UTC; MarcusBeck
+Packaged: 2024-09-04 12:25:23 UTC; MarcusBeck
 Author: Marcus Beck [aut, cre] (<https://orcid.org/0000-0002-4996-0059>),
   Perry de Valpine [aut],
   Rebecca Murphy [aut],
@@ -70,4 +70,4 @@ Author: Marcus Beck [aut, cre] (<https://orcid.org/0000-0002-4996-0059>),
   David Senn [aut] (<https://orcid.org/0000-0002-4869-3550>)
 Maintainer: Marcus Beck <mbeck@tbep.org>
 Repository: CRAN
-Date/Publication: 2024-01-26 15:30:02 UTC
+Date/Publication: 2024-09-04 12:50:02 UTC

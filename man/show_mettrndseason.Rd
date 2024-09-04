@@ -18,7 +18,7 @@ show_mettrndseason(
   width = 0.9,
   size = 3,
   nms = NULL,
-  cols = NULL,
+  fils = NULL,
   cmbn = F,
   base_size = 11,
   xlim = NULL,
@@ -41,7 +41,7 @@ show_mettrndseason(
 
 \item{nsim}{numeric indicating number of random draws for simulating uncertainty}
 
-\item{useave}{logical indicating if \code{anlz_avgseason} is used for the seasonal metric calculation}
+\item{useave}{logical indicating if \code{anlz_avgseason} is used for the seasonal metric calculation, see details}
 
 \item{yromit}{optional numeric vector for years to omit from the plot, see details}
 
@@ -53,9 +53,9 @@ show_mettrndseason(
 
 \item{nms}{optional character vector for trend names, see details}
 
-\item{cols}{optional character vector for point colors, see details}
+\item{fils}{optional character vector for the fill of interior point colors, see details}
 
-\item{cmbn}{logical indicating if the no trend and on estimate colors should be combined, see details}
+\item{cmbn}{logical indicating if the no trend and no estimate colors should be combined, see details}
 
 \item{base_size}{numeric indicating base font size, passed to \code{\link[ggplot2]{theme_bw}}}
 
@@ -63,7 +63,7 @@ show_mettrndseason(
 
 \item{ylim}{optional numeric vector of length two for y-axis limits}
 
-\item{...}{additional arguments passed to \code{metfun}, e.g., \code{na.rm = TRUE)}}
+\item{...}{additional arguments passed to \code{metfun}, e.g., \code{na.rm = TRUE}}
 }
 \value{
 A \code{\link[ggplot2]{ggplot}} object
@@ -74,7 +74,9 @@ Plot seasonal metrics and rates of change
 \details{
 The plot is the same as that returned by \code{\link{show_metseason}} with the addition of points for the seasonal metrics colored by the trends estimated from \code{\link{anlz_trndseason}} for the specified window and justification.  
 
-Four colors are used to define increasing, decreasing, no trend, or no estimate (i.e., too few points for the window).  The names and the colors can be changed using the \code{nms} and \code{cols} arguments, respectively.  The \code{cmbn} argument can be used to combine the no trend and no estimate colors into one color and label. Although this may be desired for aesthetic reasons, the colors and labels may be misleading with the default names since no trend is shown for points where no estimates were made.
+Four colors are used to define increasing, decreasing, no trend, or no estimate (i.e., too few points for the window).  The names and the colors can be changed using the \code{nms} and \code{fils} arguments, respectively.  The \code{cmbn} argument can be used to combine the no trend and no estimate colors into one color and label. Although this may be desired for aesthetic reasons, the colors and labels may be misleading with the default names since no trend is shown for points where no estimates were made.
+
+The optional \code{yromit} vector can be used to omit years from the plot and trend assessment. This may be preferred if seasonal estimates for a given year have very wide confidence intervals likely due to limited data, which can skew the trend assessments.
 }
 \examples{
 library(dplyr)
